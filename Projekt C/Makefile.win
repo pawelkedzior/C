@@ -1,0 +1,39 @@
+# Project: Pizzeria
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Pizzeria.o dlaprac.o szyfrowanko.o dlaklie.o $(RES)
+LINKOBJ  = Pizzeria.o dlaprac.o szyfrowanko.o dlaklie.o $(RES)
+LIBS =  -L"E:/Programy/Dev-Cpp/lib"  
+INCS =  -I"E:/Programy/Dev-Cpp/include" 
+CXXINCS =  -I"E:/Programy/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"E:/Programy/Dev-Cpp/include/c++/3.4.2/backward"  -I"E:/Programy/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"E:/Programy/Dev-Cpp/include/c++/3.4.2"  -I"E:/Programy/Dev-Cpp/include" 
+BIN  = Pizzeria.exe
+CXXFLAGS = $(CXXINCS)   -ansi
+CFLAGS = $(INCS)   -ansi
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Pizzeria.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Pizzeria.exe" $(LIBS)
+
+Pizzeria.o: Pizzeria.c
+	$(CC) -c Pizzeria.c -o Pizzeria.o $(CFLAGS)
+
+dlaprac.o: dlaprac.c
+	$(CC) -c dlaprac.c -o dlaprac.o $(CFLAGS)
+
+szyfrowanko.o: szyfrowanko.c
+	$(CC) -c szyfrowanko.c -o szyfrowanko.o $(CFLAGS)
+
+dlaklie.o: dlaklie.c
+	$(CC) -c dlaklie.c -o dlaklie.o $(CFLAGS)

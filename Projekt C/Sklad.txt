@@ -1,0 +1,19 @@
+01. ser
+02. szynka
+03. sos pomidorowy
+04. pieczarki
+05. kielbasa
+06. kukurydza
+07. papryka
+08. peperoni
+09. salami
+10. oregano
+11. cebula
+12. czosnek
+13. ananas
+14. oliwki
+15. pomidory
+16. kurczak
+17. chili
+18. boczek
+19. ogorek
